@@ -12,13 +12,13 @@ export const App = () => {
   const addFeedback = name => {
     switch (name) {
       case 'good':
-        setGodFeedback(good + 1);
+        setGodFeedback(prevState => prevState + 1);
         break;
       case 'neutral':
-        setNeutralFeedback(neutral + 1);
+        setNeutralFeedback(prevState => prevState + 1);
         break;
       case 'bad':
-        setBadFeedback(bad + 1);
+        setBadFeedback(prevState => prevState + 1);
         break;
 
       default:

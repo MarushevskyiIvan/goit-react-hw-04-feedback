@@ -35,8 +35,6 @@ export const App = () => {
     return total === 0 ? 0 : Math.round((good / total) * 100);
   };
 
-  const total = countTotalFeedback();
-
   return (
     <>
       <Section title="please leave the feedback" />
@@ -47,7 +45,7 @@ export const App = () => {
       <Section />
 
       <Section title="statistics" />
-      {total === 0 ? (
+      {countTotalFeedback() === 0 ? (
         <Notification message={'there is no feedback'} />
       ) : (
         <Statistics
